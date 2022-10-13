@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Http;
 
 class OngkirController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+    
     protected $key = "372146ea941c8f928014866aba042c0f";
 
     public function province()
