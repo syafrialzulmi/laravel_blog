@@ -13,6 +13,11 @@ use Log;
 
 class DosenController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         Log::info('Membuka halaman dosen pada waktu : '.date('Y-m-d H:i:s'));
