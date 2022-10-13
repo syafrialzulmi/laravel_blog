@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\OngkirController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,10 @@ Route::get('/', function () {
 Route::get('/user', [UserController::class, 'index']);
 
 Route::resource('dosen', DosenController::class);
+// Route::resource('ongkir', OngkirController::class);
+
+Route::get('/ongkir/province', [OngkirController::class, 'province']);
+Route::get('/ongkir/city/{id}', [OngkirController::class, 'city']);
 
 Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
 
