@@ -12,6 +12,7 @@
             <th scope="col">Nama Lengkap</th>
             <th scope="col">Email</th>
             <th scope="col">Departemen</th>
+            <th scope="col">Alamat</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -26,6 +27,7 @@
                 {{$item->departemen->nama_departemen}}
                 {{-- @endif --}}
             </td>
+            <td>{{$item->alamat}}</td>
             <td>{{Form::open(['url'=>'dosen/'.$item->id,'method'=>'delete'])}}
                 {{Form::submit('hapus', ['class' => 'btn btn-danger btn-sm'])}}
                 <a href="/dosen/{{$item->id}}/edit" class="btn btn-warning btn-sm">Ubah</a>

@@ -41,6 +41,12 @@
         {{ Form::select('id_departemen', $departemens, null,['class' => 'form-control', 'placeholder' => '--Pilih Departemen']) }}
     </div>
 </div>
+<div class="row mb-3">
+    {{ Form::label('alamat', 'Alamat', ['class' => 'col-sm-2 col-form-label']) }}
+    <div class="col-sm-10">
+        {{Form::textarea('alamat',null, ['class' => 'form-control', 'rows' => 5, 'placeholder' => 'Alamat'])}}
+    </div>
+</div>
 
 <div class="row mb-3">
     <div class="col-sm-10 offset-sm-2">
